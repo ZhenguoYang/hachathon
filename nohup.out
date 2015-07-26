@@ -1,0 +1,88 @@
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+Listening on 8000
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+Listening on 8000
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/img/icon32.png'
+Error: ENOENT, stat '/root/example/lookingforu/assets/ico/apple-touch-icon-144-precomposed.png'
+Error: ENOENT, stat '/root/example/lookingforu/assets/ico/apple-touch-icon-114-precomposed.png'
+Error: ENOENT, stat '/root/example/lookingforu/assets/ico/apple-touch-icon-72-precomposed.png'
+Error: ENOENT, stat '/root/example/lookingforu/assets/ico/apple-touch-icon-57-precomposed.png'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+Error: ENOENT, stat '/root/example/lookingforu/goods/search'
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+Listening on 8000
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module '/root/example/lookingforu/app.js'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Function.Module.runMain (module.js:497:10)
+    at startup (node.js:119:16)
+    at node.js:902:3
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+Listening on 8000
+received: [object Object]
+received: [object Object]
+received: [object Object]
+received: [object Object]
+connect.multipart() will be removed in connect 3.0
+visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+connect.limit() will be removed in connect 3.0
+Listening on 8000
+received: {"type":"CHATMSG","value":"111"}
+received: {"type":"CHATMSG","value":"uuu"}
+received: {"type":"CHATMSG","value":"eee"}
+received: {"type":"CHATMSG","value":"adsf"}
+received: {"type":"CHATMSG","value":"asdf\n"}
+received: {"type":"CHATMSG","value":"fff"}
+received: {"type":"CHATMSG","value":"cool"}
+received: {"type":"CHATMSG","value":"hello"}
+received: {"type":"CHATMSG","value":"lala"}
+received: {"type":"CHATMSG","id":"CX3eRg3ZI6","value":"1"}
+received: {"type":"CHATMSG","value":"t"}
+received: {"type":"CHATMSG","value":"cool"}
+received: {"type":"CHATMSG","value":"wow"}
+received: {"type":"CHATMSG","value":"f"}
+received: {"type":"CHATMSG","value":"g"}
+received: {"type":"CHATMSG","value":"rrr"}
+received: {"type":"CHATMSG","value":"yyy"}
+received: {"type":"CHATMSG","value":"ttt"}
+received: {"type":"CHATMSG","id":"UG6yZ629pL","value":"123"}
+received: {"type":"CHATMSG","id":"IxB2otPC5u","value":"555"}
+received: {"type":"CHATMSG","id":"a1eCogrDs7","value":"222"}
+received: {"type":"CHATMSG","id":"h2N34ui9CI","value":"你好"}

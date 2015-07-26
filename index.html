@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SnapInfo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Zhenguo">
+
+        <!-- Le styles -->
+        <link href="css/default.css" rel="stylesheet">
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="../assets/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="/img/icon32.png">
+    </head>
+    <style>
+    .msg-input{
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+    }
+    .heightNone{
+        height: 0;
+        width: 0;
+    }
+
+    .chat-container{
+        overflow: hidden;
+        margin-bottom: 5px;
+    }
+    .chat-avatar{
+        float: left;
+        text-align: center;
+        font-weight: bold;
+        background-color: #999;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 25px;
+        border-radius: 4px;
+    }
+    .chat-content{
+        margin: 0 35px;
+        overflow: hidden;
+    }
+    .chat-content-inner{
+        float: left;
+        color: #fff;
+        background-color: #428bca;
+        border-radius: 5px;
+        padding: 0 5px;
+        min-width: 50px;
+        max-width: 100%;
+    }
+    .chat-msg{
+        word-wrap: break-word;
+        font-size: 125%;
+    }
+    .chat-msg a{
+        color: blue;
+    }
+    .chat-time{
+        float: left;
+        font-size: 75%;
+        cursor: pointer;
+        color: #515151;
+    }
+
+    .chat-container-self .chat-avatar,
+    .chat-container-self .chat-content-inner,
+    .chat-container-self .chat-time{
+        float: right;
+    }
+    .chat-container-self .chat-content-inner{
+        background-color: #5bc0de;
+    }
+
+    .pb-chat .code-chat{}
+    .pb-chat .group-chat{}
+    </style>
+    <body>
+	<div data-role="page" id="startpage">
+            <div data-role="header">
+                <h1>Hello, Mr Right</h1>
+            </div>
+            <div role="main" class="ui-content">
+		<h1>Are you Ready?</h1>
+                <a href="#steppage1" data-role="button" data-transition="flip" class="ui-shadow ui-corner-all">Start</a>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>Copyright Microsoft 2015</h4>
+            </div>
+        </div>        
+	<div data-role="page" id="steppage1">
+            <div data-role="header">
+                <h1>Hello, Mr Right</h1>
+            </div>
+            <div role="main" class="ui-content">
+		<h1>Step 1</h1>
+		<h3>Candidate is ready, please finish the following test in 8 minutes.</h3>
+                <a href="#problempage" data-role="button" data-transition="flip" class="ui-shadow ui-corner-all">Start</a>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>Copyright Microsoft 2015</h4>
+            </div>
+        </div>
+	<div data-role="page" id="problempage">
+            <div data-role="header">
+                <h1>Hello, Mr Right</h1>
+            </div>
+            <div role="main" class="ui-content">
+	    <form>
+	    	<fieldset data-role="controlgroup" data-mini="true">
+		    <legend>When talking to people,do you</legend>
+		    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6a" value="option1" checked="checked">
+		    <label for="radio-choice-v-6a">Stand with your armw folds?</label>
+		    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6b" value="option2">
+		    <label for="radio-choice-v-6b">Have your hands clasped?</label>
+		    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6c" value="option3">
+		    <label for="radio-choice-v-6c">Have one or both hands on your hips?</label>
+		    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6d" value="option4">
+		    <label for="radio-choice-v-6d">Touch or push the person to whom you are talking?</label>
+		    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6e" value="option5">
+		    <label for="radio-choice-v-6e">Play with your ear,touch your chin ,or smooth your hair?</label>
+	        </fieldset>
+                <a href="#steppage2" data-role="button" data-transition="flip" class="ui-shadow ui-corner-all">Submit</a>
+	    </form>	
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>Copyright Microsoft 2015</h4>
+            </div>
+        </div>
+	<div data-role="page" id="steppage2">
+            <div data-role="header">
+                <h1>Hello, Mr Right</h1>
+            </div>
+            <div role="main" class="ui-content">
+		<h1>Congratuations! You fit with her.</h1>
+		<h2>Step 2</h2>
+		<h3>Message Chat in 8 minutes.</h3>
+                <a href="#chatpage" data-role="button" data-transition="flip" class="ui-shadow ui-corner-all">Start</a>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>Copyright Microsoft 2015</h4>
+            </div>
+        </div>
+	<div data-role="page" id="chatpage">
+            <div data-role="header">
+                <h1>Hello, Mr Right</h1>
+            </div>
+            <div role="main" class="ui-content">
+		<div id="incomingMessages" name="incomingMessages" class="msg-div" ></div>
+        	<label for="messageText"><strong>Message:</strong></label>
+        	<textarea name="messageText" id="messageText" class="msg-input"></textarea>
+                <button data-theme="a" class="sendmsg-btn" id="chatSendButton" name="chatSendButton">Send</button>
+                <a href="#steppage3" data-role="button" data-transition="flip" class="ui-shadow ui-corner-all">Debug button</a>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>Copyright Microsoft 2015</h4>
+            </div>
+        </div>	
+	<div data-role="page" id="steppage3">
+            <div data-role="header">
+                <h1>Hello, Mr Right</h1>
+            </div>
+            <div role="main" class="ui-content">
+		<h1>Congratuations! You fit with her.</h1>
+		<h2>Do you want to continue for video chatting?</h2>
+                <a href="#videopage" data-role="button" data-transition="flip" class="ui-shadow ui-corner-all">Yes</a>
+                <a href="#startpage" data-role="button" data-transition="flip" class="ui-shadow ui-corner-all">No</a>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>Copyright Microsoft 2015</h4>
+            </div>
+        </div>	
+        <div data-role="page" id="videopage">
+            <div data-role="header">
+                <h1>Hello, Mr Right</h1>
+            </div>
+            <div role="main" class="ui-content">
+        	<video id="localVideo" autoplay muted style="width:40%;"></video>
+        	<video id="remoteVideo" autoplay style="width:40%;"></video>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>Copyright Microsoft 2015</h4>
+            </div>
+        </div>
+	
+        <div data-role="page" id="startpage1">
+            <div data-role="header">
+                <h1>SnapInfo</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <div class="ui-field-contain">
+                    <label for="textinput-name"><b>用户名:</b></label>
+                    <input type="text" name="textinput-name" id="textinput-fc" placeholder="Text input" value="Baidu">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="textinput-psw"><b>密码:</b></label>
+                    <input type="password" name="textinput-psw" id="textinput-fc" placeholder="Text input" value="123456">
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a"><a href="#home" data-role="button" data-transition="flip" class="ui-shadow ui-corner-all">登录</a></div>
+                    <div class="ui-block-b"><a href="#home" data-role="button" data-transition="flip" class="ui-shadow ui-corner-all">重置</a></div>
+                </div> 
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>Copyright Baidu SnapInfo 2014</h4>
+            </div>
+        </div>
+        <div data-role="page" id="home" class="home-page">
+            <div data-role="header" data-position="fixed">
+                <!--a href="#" data-role="button">返回</a-->
+                <h1>附近信息</h1>
+                <a href="#catgpanel" data-role="button">分类查询</a>
+            </div>
+            <div role="main" class="ui-content">
+                <input type="search" name="password" id="input-search" value="" placeholder="搜索">
+                <ul data-role="listview" data-inset="true" id="listview-goods" >
+
+                </ul>
+            </div><!-- /grid-c -->
+
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home" data-icon="gear" class="ui-btn-active ui-state-persist">附近信息</a></li>
+                        <!--li><a href="#map" data-icon="refresh">Button 2</a></li-->
+                        <li><a href="#submit" data-icon="check">我要发布</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="popup" class="goodsinfo-popup" id="goodsinfo"> 
+                <h3 class="ui-bar ui-bar-a ui-corner-all goods-info-title">Heading</h3>
+                <div class="ui-body ui-corner-all">
+                    <p class="goods-info-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan blandit fermentum. Pellentesque cursus mauris purus, auctor commodo mi ullamcorper nec. Donec semper mattis eros, nec condimentum ante sollicitudin quis. Etiam orci sem, porttitor ut tellus nec, blandit posuere urna. Proin a arcu non lacus pretium faucibus. Aliquam sed est porttitor, ullamcorper urna nec, vehicula lorem. Cras porttitor est lorem, non venenatis diam convallis congue.</p>
+                </div>
+                <a href="#" data-rel="back" data-role="button"><b>关闭</b></a>
+            </div>
+            <div data-role="panel" id="catgpanel" data-display="overlay">
+                <div data-role="collapsible-set" data-inset="false">
+                    <div data-role="collapsible">
+                        <h3>餐饮美食</h3>
+                        <ul class="catg-ul" data-role="listview" data-inset="false">
+                            <li data-value=1>全部</li>
+                            <li data-value=10101>火锅</li>
+                            <li data-value=10104>烧烤</li>
+                            <li data-value=10105>蛋糕</li>
+                            <li data-value=10107>其他</li>
+                            <li data-value=10108>烤鱼</li>
+                            <li data-value=10109>西餐</li>
+                            <li data-value=10110>日韩料理</li>
+                            <li data-value=10111>麻辣香锅</li>
+                            <li data-value=10112>快餐</li>
+                            <li data-value=10113>地方菜</li>
+                            <li data-value=10114>海鲜</li>
+                            <li data-value=10115>东南亚菜</li>
+                            <li data-value=10116>咖啡</li>
+                            <li data-value=10117>下午茶</li>
+                            <li data-value=10118>自助餐</li>
+                            <li data-value=10119>甜品饮料</li>
+                        </ul>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>休闲娱乐</h3>
+                        <ul class="catg-ul" data-role="listview" data-inset="false">
+                            <li data-value=10201>KTV</li>
+                            <li data-value=10202>电影</li>
+                            <li data-value=10203>展览演出</li>
+                            <li data-value=10204>运动健身</li>
+                            <li data-value=10205>游乐电玩</li>
+                            <li data-value=10207>其他</li>
+                            <li data-value=10209>洗浴</li>
+                            <li data-value=10211>足疗按摩</li>
+                            <li data-value=10212>温泉</li>
+                            <li data-value=10213>滑雪</li>
+                            <li data-value=10214>采摘</li>
+                            <li data-value=10215>酒吧</li>
+                            <li data-value=10216>4D/5D电影</li>
+                        </ul>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>生活服务</h3>
+                        <ul class="catg-ul" data-role="listview" data-inset="false">
+                            <li data-value=10306>写真</li>
+                            <li data-value=10307>婚纱摄影</li>
+                            <li data-value=10308>儿童摄影</li>
+                            <li data-value=10309>口腔</li>
+                            <li data-value=10310>体检</li>
+                            <li data-value=10311>汽车养护</li>
+                            <li data-value=10312>教育培训</li>
+                            <li data-value=10313>鲜花配送</li>
+                            <li data-value=10314>婚庆策划</li>
+                            <li data-value=10315>配镜</li>
+                            <li data-value=10316>宠物</li>
+                            <li data-value=10317>母婴亲子</li>
+                            <li data-value=10318>快照冲印</li>
+                        </ul>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>旅游住宿</h3>
+                        <ul class="catg-ul" data-role="listview" data-inset="false">
+                            <li data-value=5>全部</li>
+                            <li data-value=10501>景点公园</li>
+                            <li data-value=10502>旅游</li>
+                            <li data-value=10503>酒店</li>
+                        </ul>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>丽人</h3>
+                        <ul class="catg-ul" data-role="listview" data-inset="false">
+                            <li data-value=6>全部</li>
+                            <li data-value=10601>美发</li>
+                            <li data-value=10602>美甲</li>
+                            <li data-value=10603>美容美体</li>
+                        </ul>
+                    </div>
+                </div>
+                <a data-role="button" data-rel="close">关闭</a>
+            </div><!-- /panel -->
+        </div>
+        <div data-role="page" id="submit" class="submit-page">
+            <div data-role="header" data-position="fixed">
+                <a href="#home" data-role="button">返回</a>
+                <h1>发布信息</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <!--label for="select-choice-8" class="select">信息分类：</label-->
+                <select name="select-catg" id="select-catg" data-icon="grid" data-iconpos="left">
+                    <option>请选择分类</option>
+                    <optgroup label="餐饮美食">
+                        <option value=10101>火锅</option>
+                        <option value=10104>烧烤</option>
+                        <option value=10105>蛋糕</option>
+                        <option value=10107>其他</option>
+                        <option value=10108>烤鱼</option>
+                        <option value=10109>西餐</option>
+                        <option value=10110>日韩料理</option>
+                        <option value=10111>麻辣香锅</option>
+                        <option value=10112>快餐</option>
+                        <option value=10113>地方菜</option>
+                        <option value=10114>海鲜</option>
+                        <option value=10115>东南亚菜</option>
+                        <option value=10116>咖啡</option>
+                        <option value=10117>下午茶</option>
+                        <option value=10118>自助餐</option>
+                        <option value=10119>甜品饮料</option>
+                    </optgroup>
+                    <optgroup label="休闲娱乐">
+                        <option value=10201>KTV</option>
+                        <option value=10202>电影</option>
+                        <option value=10203>展览演出</option>
+                        <option value=10204>运动健身</option>
+                        <option value=10205>游乐电玩</option>
+                        <option value=10207>其他</option>
+                        <option value=10209>洗浴</option>
+                        <option value=10211>足疗按摩</option>
+                        <option value=10212>温泉</option>
+                        <option value=10213>滑雪</option>
+                        <option value=10214>采摘</option>
+                        <option value=10215>酒吧</option>
+                        <option value=10216>4D/5D电影</option>
+                    </optgroup>
+                    <optgroup label="生活服务">
+                        <option value=10306>写真</option>
+                        <option value=10307>婚纱摄影</option>
+                        <option value=10308>儿童摄影</option>
+                        <option value=10309>口腔</option>
+                        <option value=10310>体检</option>
+                        <option value=10311>汽车养护</option>
+                        <option value=10312>教育培训</option>
+                        <option value=10313>鲜花配送</option>
+                        <option value=10314>婚庆策划</option>
+                        <option value=10315>配镜</option>
+                        <option value=10316>宠物</option>
+                        <option value=10317>母婴亲子</option>
+                        <option value=10318>快照冲印</option>
+                    </optgroup>
+                    <optgroup label="网上购物">
+                        <option value=10401>食品保健</option>
+                        <option value=10405>家居家纺</option>
+                        <option value=10406>其他</option>
+                        <option value=10407>图书杂志</option>
+                        <option value=10409>运动户外</option>
+                        <option value=10415>个护化妆</option>
+                        <option value=10417>母婴玩具</option>
+                        <option value=10418>服装/内衣</option>
+                        <option value=10419>手表饰品</option>
+                        <option value=10420>鞋/箱包</option>
+                        <option value=10423>数码家电</option>
+                    </optgroup>
+                    <optgroup label="网上购物">
+                        <option value=10501>景点公园</option>
+                        <option value=10502>旅游</option>
+                        <option value=10503>酒店</option>
+                    </optgroup>
+                    <optgroup label="丽人">
+                        <option value=10601>美发</option>
+                        <option value=10602>美甲</option>
+                        <option value=10603>美容美体</option>
+                    </optgroup>
+                </select>
+                <div class="ui-field-contain">
+                    <input type="text" name="textinput-title" id="textinput-title" placeholder="名称" value="">
+                </div>
+                <div class="ui-field-contain">
+                    <textarea rows="4" name="textarea-desc" id="textarea-desc" placeholder="描述"></textarea>
+                </div>
+                <!--label for="select-choice-a" class="select"><b>有效期:</b></label-->
+                <select name="select-duration" id="select-duration">
+                    <option>请选择有效期</option>
+                    <option value="60">1 分钟</option>
+                    <option value="300">5 分钟</option>
+                    <option value="600">10 分钟</option>
+                    <option value="1200">20 分钟</option>
+                    <option value="1800">30 分钟</option>
+                    <option value="3600">1 小时</option>
+                    <option value="18000">5 小时</option>
+                </select>
+                <a class="btn-submit" data-role="button">提交</a>
+            </div>
+        </div>
+
+        <div data-role="page" id="map">
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-role="button">返回</a>
+                <h1>我的地图</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <div id="mapcontainer" style="height:400px; width:100%;">
+                </div>
+            </div><!-- /grid-c -->
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="gear" class="ui-btn-active ui-state-persist">Button 1</a></li>
+                        <li><a href="#map" data-icon="refresh">地图</a></li>
+                        <li><a href="#" data-icon="check">发布</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script data-main="js/main" src="js/libs/requirejs/require.js"></script>
+    </body>
+</html>
